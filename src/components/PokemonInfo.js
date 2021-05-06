@@ -1,7 +1,6 @@
 import React, {useContext} from 'react';
 import {SearchingNameContext} from '../contexts/SearchingNameContext';
 import styled from 'styled-components';
-import { createContext } from 'react';
 
 console.log(SearchingNameContext);
 

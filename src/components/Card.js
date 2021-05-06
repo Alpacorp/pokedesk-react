@@ -45,7 +45,7 @@ const Card = ({pokemons}) => {
         }
     }, [singlePokemon])
 
-    allPokemons.sort(function (a, b){
+    allPokemons.sort((a, b) => {
         if(a.name < b.name){
             return -1
         }
@@ -73,7 +73,7 @@ const Card = ({pokemons}) => {
 }
 
 const PokemonCard = styled.a`
-    width: 30%;
+    width: 20%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
