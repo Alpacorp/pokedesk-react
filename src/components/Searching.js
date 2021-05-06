@@ -52,7 +52,7 @@ const Searching = () => {
                 changePokemonAbilities(pokemon.abilities)
             )
         }
-    }, [pokemon, btnClick, fullInputValue]);
+    }, [pokemon, btnClick, fullInputValue, changePokemonAbilities, changePokemonId, changePokemonImage, changePokemonName, changePokemonType]);
 
     return (
         <div>

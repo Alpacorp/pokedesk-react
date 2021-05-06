@@ -4,16 +4,16 @@ import styled from 'styled-components';
 
 const Results = () => {
 
-    let [pagination, setPagination] = useState(12);
+    let [pagination, setPagination] = useState(6);
     const [pokemons, setPokemons] = useState([]);
 
     const seeMorePokemons = () => {
-        setPagination(pagination = pagination + 3);
+        setPagination(pagination = pagination + 6);
     }
 
     useEffect(() => {
         if (pagination) {
-            fetch(`https://pokeapi.co/api/v2/pokemon?limit=${pagination}`)
+            fetch(`https://pokeapi.co/api/v2/pokemon?offset=${pagination}?&limit=6`)
             .then((res) => {
                 return res.json();
             }).then((pokemonList) => {

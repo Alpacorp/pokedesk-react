@@ -29,7 +29,7 @@ const PokemonInfo = () => {
     }else {
         return (
             <ImageContainer>
-                <img src="https://assets.thespinoff.co.nz/1/2019/04/HddtBOT.png"/>
+                <img src="https://assets.thespinoff.co.nz/1/2019/04/HddtBOT.png" alt="not found"/>
             </ImageContainer>
         )
     }

@@ -16,7 +16,6 @@ const Card = ({pokemons}) => {
     const [singlePokemon, setSinglePokemon] = useState('');
 
     useEffect(() => {
-        setAllPokemons([]);
         for (let index = 0; index < pokemons.length; index++) {
             fetch(`https://pokeapi.co/api/v2/pokemon/${pokemons[index].name}`)
             .then((res) => {
@@ -45,15 +44,6 @@ const Card = ({pokemons}) => {
         }
     }, [singlePokemon])
 
-    allPokemons.sort((a, b) => {
-        if(a.name < b.name){
-            return -1
-        }
-        if(a.name > b.name){
-            return 1;
-        }
-    });
-
     return (
         <>
             {
@@ -73,7 +63,7 @@ const Card = ({pokemons}) => {
 }
 
 const PokemonCard = styled.a`
-    width: 20%;
+    width: 25%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
