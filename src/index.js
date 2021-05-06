@@ -3,10 +3,13 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { SearchingNameProvider } from './contexts/SearchingNameContext';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <SearchingNameProvider>
+      <App />
+    </SearchingNameProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
