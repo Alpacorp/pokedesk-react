@@ -38,13 +38,18 @@ const PokemonInfo = () => {
 const PokemonImageContainer = styled.div`
     width: 100%;
     margin-top: 20px;
-    box-shadow: 2px 2px 7px rgba(0,0,0,0.2);
-    border-radius: 10px;
     margin-bottom: 30px;
     & > img {
         display: block;
         margin: auto;
         width: 40%;
+        background-color: rgb(222,253,224);
+        border-radius: 50%;
+    }
+    @media (max-width: 520px){
+        img {
+            width: 100px;
+        }
     }
 `
 
@@ -60,11 +65,11 @@ const ImageContainer = styled.div`
 `
 
 const PokemonDescription = styled.div`
-    background: red;
+    background-color: rgb(222,253,224);
     padding: 25px;
     border-radius: 10px;
     box-shadow: 2px 2px 7px rgba(0,0,0,0.3);
-    color: #ffffff;
+    color: #1767AC;
     & h2 {
         margin-bottom: 7px;
         font-weight: 700;
@@ -75,6 +80,14 @@ const PokemonDescription = styled.div`
         font-weight: 400;
         margin-left: 7px;
         font-size: 1.3rem;
+    }
+    @media (max-width: 520px){
+        h2 {
+            font-size: 10px;
+            > span {
+                font-size: 10px;
+            }
+        }
     }
 `
 

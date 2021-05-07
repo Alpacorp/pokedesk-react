@@ -25,27 +25,38 @@ const Results = () => {
         return (
             <Result>
                 <Card pokemons={pokemons}/>
-                <button onClick={seeMorePokemons}>See 3 +</button>
+                <button onClick={seeMorePokemons}>See 6 More</button>
             </Result>
         );
 }
 
 const Result = styled.div`
-    width: 50%;
+    width: 70%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     padding-right: 30px;
 
+    @media (max-width: 850px){
+        width: 100%;
+    }
+
+    @media (max-width: 520px){
+        justify-content: space-evenly;
+    }
+
     & > button {
-        background: #0d6efd;
+        background: #FECB06;
         display: block;
         width: 100%;
-        border: none;
-        color: #ffffff;
+        box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+        color: #1767AC;
+        font-weight: bold;
         padding: 10px 50px;
         cursor: pointer;
         border-radius: 5px;
+        margin: 20px auto;
+        border: none;
 
         &:focus {
             outline: 0;

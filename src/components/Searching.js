@@ -87,13 +87,17 @@ const PokemonInput = styled.input`
 `
 
 const PokemonBtn = styled.button`
-    background: red;
+    background: #97b3e6;
+    cursor: pointer;
     border: none;
-    width: 15%;
+    width: 30%;
     color: #ffffff;
     border-radius: 0px 5px 5px 0px;
     &:focus {
         outline: none;
+    }
+    @media (max-width: 520px){
+        font-size: 10px;
     }
 `
 

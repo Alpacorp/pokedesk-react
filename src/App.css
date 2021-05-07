@@ -1,0 +1,13 @@
+.App {
+    height: 100vh;
+    margin: auto;
+    position: sticky;
+    background-color: linear-gradient(to right, #d4d3dd, #efefbb);
+}
+
+@media screen and(max-width: 850px){
+    .App {
+        display: flex;
+        justify-content: center;
+    }
+}

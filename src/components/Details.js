@@ -13,11 +13,22 @@ const Details = () => {
 }
 
 const PokemonDetails = styled.div`
-    width: 50%;
+    width: 30%;
+    position: fixed;
+    right: 60px;
     padding: 30px;
-    border: 1px solid #ecf0f1;
-    background: #fafafa;
+    background: #98D7A5;
     border-radius: 10px;
+    box-shadow: 0 3px 15px rgb(100 100 100 / 50%);
+
+    @media (max-width: 850px){
+        position: unset;
+        ${'' /* right: 0;
+        margin: 0; */}
+        display: block;
+        width: 50%;
+        margin: auto;
+    }
 `
 
 export default Details;

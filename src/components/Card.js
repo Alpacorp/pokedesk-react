@@ -63,14 +63,17 @@ const Card = ({pokemons}) => {
 }
 
 const PokemonCard = styled.a`
-    width: 25%;
+    width: 30%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     border: 1px solid #ecf0f1;
-    margin-bottom: 20px;
-    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 3px 15px rgb(100 100 100 / 50%);
+    margin: 5px;
+    background-color: rgb(222, 253, 224);
+    
     cursor: pointer;
     text-decoration: none;
 
@@ -80,13 +83,31 @@ const PokemonCard = styled.a`
         border-radius: 10px;
     }
 
+    & > div {
+        padding: 20px;
+    }
 
     & > div > h6 {
         font-size: 1rem;
         text-align: center;
         width: 100%;
-        font-weight: 600;
-        color: #000000;
+        color: #585757;
+        margin: 5px auto;
+    }
+
+    & > div > img {
+        background-color: #fff;
+        border-radius: 50%;
+    }
+    @media (max-width: 520px){
+        & > div > img {
+            background-color: #fff;
+            border-radius: 50%;
+            width: 50px;
+        }
+        & > div > h6 {
+            font-size: 0.5rem;
+        }
     }
 `
 
