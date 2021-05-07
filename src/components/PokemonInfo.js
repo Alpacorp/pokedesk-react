@@ -2,11 +2,9 @@ import React, {useContext} from 'react';
 import {SearchingNameContext} from '../contexts/SearchingNameContext';
 import styled from 'styled-components';
 
-console.log(SearchingNameContext);
-
 const PokemonInfo = () => {
     const {pokemonName, pokemonType, pokemonId, pokemonImage, pokemonAbilities} = useContext(SearchingNameContext);
-    console.log(pokemonImage);
+    
     if (pokemonName && pokemonType && pokemonId && pokemonImage && pokemonAbilities) {
 
         return (

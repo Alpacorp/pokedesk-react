@@ -30,12 +30,6 @@ const SearchingNameProvider = ({children}) => {
         setPokemonAbilities(pokemonAbilities);
     }
 
-    console.log("resultado", pokemonName);
-    console.log("resultado", pokemonType);
-    console.log("resultado", pokemonId);
-    console.log("resultado", pokemonImage);
-    console.log("resultado", pokemonAbilities);
-
     return (
         <SearchingNameContext.Provider value={{changePokemonName, changePokemonType, changePokemonId, changePokemonImage, changePokemonAbilities, pokemonName, pokemonType, pokemonId, pokemonImage, pokemonAbilities}}>
             {children}

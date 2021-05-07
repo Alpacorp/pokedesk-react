@@ -5,7 +5,7 @@ import styled from 'styled-components';
 
 const Details = () => {
     return (
-        <PokemonDetails>
+        <PokemonDetails id="details">
             <Searching/>
             <PokemonInfo/>
         </PokemonDetails>
@@ -23,8 +23,6 @@ const PokemonDetails = styled.div`
 
     @media (max-width: 850px){
         position: unset;
-        ${'' /* right: 0;
-        margin: 0; */}
         display: block;
         width: 50%;
         margin: auto;

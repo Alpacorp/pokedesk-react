@@ -15,7 +15,6 @@ function App() {
 }
 
 const Main = styled.div`
-  ${'' /* border: 1px solid gray; */}
   display: flex;
   width: 70%;
   margin: 50px;

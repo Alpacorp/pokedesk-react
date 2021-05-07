@@ -4,8 +4,6 @@ import {SearchingNameContext} from '../contexts/SearchingNameContext';
 
 const Card = ({pokemons}) => {
 
-    console.log(SearchingNameContext);
-
     let {changePokemonName} = useContext(SearchingNameContext);
     let {changePokemonType} = useContext(SearchingNameContext);
     let {changePokemonId} = useContext(SearchingNameContext);
@@ -23,12 +21,9 @@ const Card = ({pokemons}) => {
             })
             .then((singlePokemonUrl) => {
                 setAllPokemons((allPokemons)=> allPokemons.concat(singlePokemonUrl));
-                console.log(singlePokemonUrl);
             })
         }
     },[pokemons])
-    console.log(allPokemons);
-    console.log(singlePokemon);
 
     const getPokemonClick = (pokemon) => {
         setSinglePokemon(pokemon);
@@ -49,7 +44,7 @@ const Card = ({pokemons}) => {
             {
                 allPokemons.map((pokemon) => {
                     return (
-                        <PokemonCard key={pokemon.name} onClick={()=>getPokemonClick(pokemon)}>
+                        <PokemonCard key={pokemon.name} onClick={()=>getPokemonClick(pokemon)} href="#details">
                             <div>
                                 <img src={pokemon.sprites.front_default} alt={pokemon.name}/>
                                 <h6>{pokemon.name}</h6>

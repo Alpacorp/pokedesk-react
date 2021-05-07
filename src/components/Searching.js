@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import {SearchingNameContext} from '../contexts/SearchingNameContext';
 import Error from './Error';
 
-
 const Searching = () => {
 
     const [inputValue, setInputValue] = useState('');
@@ -23,10 +22,6 @@ const Searching = () => {
         setFullInputValue(inputValue);
     }
 
-    console.log(fullInputValue);
-    console.log(inputValue);
-    console.log(pokemon);
-
     useEffect(() => {
         if (btnClick === true && fullInputValue) {
             fetch(`https://pokeapi.co/api/v2/pokemon/${fullInputValue}`)
@@ -41,7 +36,6 @@ const Searching = () => {
 
     useEffect(() => {
         if (pokemon && btnClick === true && fullInputValue) {
-            // setInputValue('');
             setBtnClick(false);
             setPokemon('');
             return (
